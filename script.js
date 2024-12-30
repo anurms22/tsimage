@@ -3,6 +3,16 @@ const preloadedImages = [
     "images/OG Blue.jpg",
     "images/OG Red.jpg",
     "images/OG Green.jpg",
+    "images/OG Yellow.jpg",
+    "images/Sunset.jpg",
+    "images/Sunrise Boulevard.jpg",
+    "images/Betta Fish.jpg",
+    "images/Bright Pink.jpg",
+    "images/Ocean Blue.jpg",
+    "images/Koi Fish.jpg",
+    "images/Betta Fish.jpg",
+    "images/Bright Pink.jpg",
+    "images/Supernova.jpg",
 ];
 
 const pickButton = document.getElementById('pickButton');
