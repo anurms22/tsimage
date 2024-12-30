@@ -7,6 +7,7 @@ const preloadedImages = [
 
 const pickButton = document.getElementById('pickButton');
 const imagePreview = document.getElementById('imagePreview');
+const message = document.getElementById('message');
 
 // Event listener for picking a random image
 pickButton.addEventListener('click', () => {
@@ -17,6 +18,7 @@ pickButton.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * preloadedImages.length);
     const randomImage = preloadedImages[randomIndex];
     displayImage(randomImage);
+    message.textContent = `Congrats! You have gotten this image: ${randomImage.split('/').pop()}`;
 });
 
 // Function to display an image
