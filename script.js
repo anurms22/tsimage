@@ -18,20 +18,25 @@ const preloadedImages = [
 const pickButton = document.getElementById('pickButton');
 const imagePreview = document.getElementById('imagePreview');
 const message = document.getElementById('message');
+const header = document.getElementById('header'); // Grab the header element
 
 // Event listener for picking a random image
 pickButton.addEventListener('click', () => {
     if (preloadedImages.length === 0) {
-        alert('No images available!');
+        message.textContent = 'No images available!';
         return;
     }
     const randomIndex = Math.floor(Math.random() * preloadedImages.length);
     const randomImage = preloadedImages[randomIndex];
     displayImage(randomImage);
-    message.textContent = `Congrats! You have gotten this image: ${randomImage.split('/').pop()}`;
+    message.textContent = `Your surprise outfit is ${randomImage.split('/').pop().replace(/\.[^/.]+$/, "")}!`;
+
+    // Hide the header after the image is selected
+    header.style.display = 'none';  // Hide the header
 });
 
 // Function to display an image
 function displayImage(imagePath) {
+    imagePreview.style.display = 'inline-block';  // Make the image box visible
     imagePreview.innerHTML = `<img src="${imagePath}" alt="Random Image">`;
 }
