@@ -1,9 +1,9 @@
 // Pre-stored images (replace with your actual image paths or URLs)
 const preloadedImages = [
-    "images/OG Blue.jpg",
-    "images/OG Red.jpg",
-    "images/OG Green.jpg",
-    "images/OG Yellow.jpg",
+    "images/Original Blue.jpg",
+    "images/Original Red.jpg",
+    "images/Original Green.jpg",
+    "images/Original Yellow.jpg",
     "images/Sunset.jpg",
     "images/Sunrise Boulevard.jpg",
     "images/Betta Fish.jpg",
@@ -19,6 +19,7 @@ const pickButton = document.getElementById('pickButton');
 const imagePreview = document.getElementById('imagePreview');
 const message = document.getElementById('message');
 const header = document.getElementById('header'); // Grab the header element
+const splashImage = document.getElementById('splashImage');
 
 // Event listener for picking a random image
 pickButton.addEventListener('click', () => {
@@ -29,10 +30,12 @@ pickButton.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * preloadedImages.length);
     const randomImage = preloadedImages[randomIndex];
     displayImage(randomImage);
-    message.textContent = `Your surprise outfit is ${randomImage.split('/').pop().replace(/\.[^/.]+$/, "")}!`;
+    message.textContent = `Your surprise song outfit is ${randomImage.split('/').pop().replace(/\.[^/.]+$/, "")}!`;
 
     // Hide the header after the image is selected
     header.style.display = 'none';  // Hide the header
+
+    splashImage.style.display = 'none'; // Remove the splash image after button is clicked
 });
 
 // Function to display an image

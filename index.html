@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taylor Swift Surprise Outfits</title>
+    <title>Taylor Swift Surprise Song Outfits</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,14 +22,21 @@
         }
         h1 {
             color: #000000; /* Customize the color of the header */
+            font-size: clamp(1.5em, 4vw, 2.5em); /* Scales on mobile and desktop */
+            margin-bottom: 20px;
+        }
+        .splash-image {
+            margin: 20px 0;
+            max-width: 80%;
+            max-height: 40%;
         }
         .image-preview {
-            margin: 20px auto;
+            margin: 20px 0;
             border: 2px solid #ccc;
             display: none;  /* Hide the box initially */
             padding: 10px;
-            max-width: 90%;
-            max-height: 90%;
+            max-width: 80%;
+            max-height: 70%; /* Scale the image for consistent viewing */
             box-sizing: border-box;
         }
         img {
@@ -37,8 +44,8 @@
             max-height: 100%;
         }
         .message {
-            margin: 20px auto;
-            font-size: 2.5em;
+            margin: 10px 0;
+            font-size: clamp(1em, 2.5vw, 1.5em); /* Scales font size for mobile and desktop */
             font-weight: bold;
             color: #3c206d; /* Customize the color of the message */
         }
@@ -46,17 +53,19 @@
             margin-top: 20px;
         }
         button {
-            font-size: 1em;
+            font-size: clamp(1em, 2.5vw, 1.2em); /* Scales button font size */
             padding: 10px;
             margin: 5px;
-            width: calc(100% - 20px);
-            max-width: 400px;
+            width: auto;
+            max-width: 300px; /* Reduced button size for mobile */
+            white-space: nowrap; /* Ensure text stays on one line */
             box-sizing: border-box;
         }
     </style>
 </head>
 <body>
-    <h1 id="header">Surprise Outfit!</h1>
+    <h1 id="header">OH HI! Surprise O'Clock TIME!</h1>
+    <img src="images/intro.jpg" alt="Splash Image" class="splash-image" id="splashImage"> <!-- Add your own splash image -->
     <div class="image-preview" id="imagePreview"></div>
     <div class="message" id="message"></div>
     <div class="controls">
